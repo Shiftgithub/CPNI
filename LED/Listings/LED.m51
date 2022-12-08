@@ -1,0 +1,102 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    12/04/2022  18:00:20  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\LED.obj TO .\Objects\LED PRINT (.\Listings\LED.m51)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\LED.obj (LED)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  .\Objects\LED (LED)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     001DH     UNIT         ?PR?DELAY?LED
+            CODE    081DH     0014H     UNIT         ?PR?MAIN?LED
+            CODE    0831H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\LED (LED)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?LED
+
+?PR?MAIN?LED
+  +--> ?PR?DELAY?LED
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\LED (LED)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        LED
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:00A0H         PUBLIC        P2
+  B:00A0H.2       PUBLIC        LED1
+  B:00A0H.5       PUBLIC        LED2
+  B:00A0H.6       PUBLIC        LED3
+  C:0800H         PUBLIC        delay
+  C:081DH         PUBLIC        main
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/04/2022  18:00:20  PAGE 2
+
+
+  -------         PROC          DELAY
+  -------         DO            
+  D:0006H         SYMBOL        i
+  D:0004H         SYMBOL        j
+  -------         ENDDO         
+  C:0800H         LINE#         7
+  C:0800H         LINE#         8
+  C:0800H         LINE#         12
+  C:0803H         LINE#         13
+  C:0803H         LINE#         14
+  C:0806H         LINE#         15
+  C:0806H         LINE#         16
+  C:0811H         LINE#         17
+  C:081CH         LINE#         18
+  -------         ENDPROC       DELAY
+  -------         PROC          MAIN
+  C:081DH         LINE#         20
+  C:081DH         LINE#         21
+  C:081DH         LINE#         22
+  C:081DH         LINE#         23
+  C:081DH         LINE#         24
+  C:081FH         LINE#         25
+  C:0821H         LINE#         26
+  C:0823H         LINE#         27
+  C:0826H         LINE#         28
+  C:0828H         LINE#         29
+  C:082AH         LINE#         30
+  C:082CH         LINE#         31
+  C:082FH         LINE#         32
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        LED
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0031H BYTE ( 2%) *
+******************************************************************************
+
+Program Size: data=9.0 xdata=0 code=64
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
